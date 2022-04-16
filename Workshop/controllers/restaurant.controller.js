@@ -25,7 +25,7 @@ class DishController {
     try {
       const newDishData = req.body;
       const createdDish = await DishModel.addNewDish(newDishData);
-      res.status(200).send(createdDish);
+      res.status(201).send(createdDish);
     } catch (error) {
       res.status(400).send(error);
     }
