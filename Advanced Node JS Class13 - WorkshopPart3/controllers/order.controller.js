@@ -77,7 +77,7 @@ class OrderController {
       const orderId = req.params.id;
       const dishIds = req.body.dishIds;
 
-      const updatedOrder = await OrderService.updateOrders(orderId, dishIds);
+      const updatedOrder = await OrderService.updateDishes(orderId, dishIds);
       res.status(200).send(updatedOrder);
     } catch (error) {
       console.log(error);
